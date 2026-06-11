@@ -1,7 +1,6 @@
-import { Home, Menu, X } from "lucide-react";
+import {Home, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { NavLink } from "./NavLink";
-import { MobileNavLink } from "./MobileNavLink";
 
 export const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,12 +13,12 @@ export const Navbar = () => {
                 <div className="flex justify-between h-16">
                     {/* Logo */}
                     <div className="flex items-center">
-                        <span className="font-bold text-xl">App</span>
+                        <span className="font-bold text-xl">Game Store</span>
                     </div>
 
                     {/* Navegacion escritorio */}
                     <div className="hidden md:flex items-center space-x-4">
-                        <NavLink icon={<Home size={18} />} text="Inicio" to="/" active />
+                        <NavLink icon={<Home size={18} />} text="Inicio" to="/" active/>
                     </div>
 
                     {/* Boton menu movil */}
@@ -38,7 +37,7 @@ export const Navbar = () => {
             {isMenuOpen && (
                 <div className="md:hidden bg-blue-900">
                     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                        <MobileNavLink icon={<Home size={18} />} text="Inicio" to="/" active />
+                        
                     </div>
                 </div>
             )}
